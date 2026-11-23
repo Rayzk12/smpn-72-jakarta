@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3366ff">
+    <meta name="description" content="Profil, sambutan kepala sekolah, visi misi, informasi kontak, dan daftar guru SMPN 72 Jakarta.">
+    <title>Profil — SMPN 72 Jakarta</title>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef5ff', 100: '#d9e7ff', 200: '#bcd4ff', 300: '#8eb7ff',
+                            400: '#598dff', 500: '#3366ff', 600: '#1f48f0', 700: '#1a37cc',
+                            800: '#1c30a3', 900: '#1c2f80'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/splash.css">
+    <script>
+        try {
+            if (sessionStorage.getItem('smpn72-splash') === '1') {
+                document.documentElement.classList.add('skip-splash');
+            } else {
+                sessionStorage.setItem('smpn72-splash', '1');
+            }
+        } catch (e) {}
+    </script>
+</head>
+<body class="bg-white font-sans text-gray-900 antialiased">
+
+    <div id="page-splash" aria-hidden="true">
+        <img src="assets/logo.png" width="92" height="92" alt="">
+        <p class="page-splash-title">SMPN 72 Jakarta</p>
+        <p class="page-splash-sub">Sekolah Inovatif &amp; Berprestasi</p>
+        <span class="page-splash-load"></span>
+    </div>
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">
+        Lewati ke konten utama
+    </a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70">
+        <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between gap-4">
+
+                <a href="index.html#home" class="flex items-center gap-3">
+                    <img src="assets/logo.png" alt="Logo SMPN 72 Jakarta" class="h-10 w-10 object-contain">
+                    <div class="leading-tight">
+                        <p class="font-display text-sm font-bold text-gray-900">SMPN 72</p>
+                        <p class="text-[10px] font-medium uppercase tracking-wider text-gray-500">Jakarta</p>
+                    </div>
+                </a>
+
+                <nav class="hidden items-center gap-0.5 lg:flex" aria-label="Navigasi utama">
+                    <a href="index.html#home" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Home</a>
+                    <a href="profil.html" aria-current="page" class="rounded-full px-3 py-1.5 text-sm font-medium transition bg-brand-50 text-brand-700">Profil</a>
+                    <a href="kurikulum.html" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Kurikulum</a>
+                    <a href="kesiswaan.html" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Kesiswaan</a>
+                    <a href="sarpras.html" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Sarpras</a>
+                    <a href="berita.html" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Berita</a>
+                    <a href="index.html#kontak" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Kontak</a>
+                </nav>
+
+                <div class="hidden items-center gap-1 lg:flex">
+                    <a href="https://instagram.com/smpn72jkt" target="_blank" rel="noreferrer" aria-label="Instagram" class="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-pink-600">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"></circle></svg>
+                    </a>
+                    <a href="https://tiktok.com/@smpn72jkt" target="_blank" rel="noreferrer" aria-label="TikTok" class="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-black">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.92a8.16 8.16 0 0 0 4.77 1.52V7a4.84 4.84 0 0 1-1.84-.31z"></path></svg>
+                    </a>
+                    <a href="https://twitter.com/smpn72jkt" target="_blank" rel="noreferrer" aria-label="Twitter" class="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-sky-600">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.873l-4.79-6.255L4.8 22H2.043l6.96-7.953L2 2h7.043l4.32 5.71L18.244 2Zm-1.207 18.4h1.78L7.046 3.5H5.13L17.037 20.4Z"></path></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@smpn72jakarta" target="_blank" rel="noreferrer" aria-label="YouTube" class="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-red-600">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M23.498 6.186a2.998 2.998 0 0 0-2.111-2.119C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.387.567A2.998 2.998 0 0 0 .502 6.186 31.43 31.43 0 0 0 0 12a31.43 31.43 0 0 0 .502 5.814 2.998 2.998 0 0 0 2.111 2.119C4.495 20.5 12 20.5 12 20.5s7.505 0 9.387-.567a2.998 2.998 0 0 0 2.111-2.119A31.43 31.43 0 0 0 24 12a31.43 31.43 0 0 0-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z"></path></svg>
+                    </a>
+                </div>
+
+                <button type="button" id="menu-toggle" class="rounded-md p-2 text-gray-700 hover:bg-gray-100 lg:hidden" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+                    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden h-5 w-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white lg:hidden">
+            <nav class="mx-auto w-full max-w-6xl space-y-1 px-4 py-4 sm:px-6" aria-label="Navigasi mobile">
+                <a href="index.html#home" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Home</a>
+                <a href="profil.html" class="block rounded-xl bg-brand-50 px-4 py-2.5 text-sm font-semibold text-brand-700">Profil</a>
+                <a href="kurikulum.html" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Kurikulum</a>
+                <a href="kesiswaan.html" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Kesiswaan</a>
+                <a href="sarpras.html" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Sarpras</a>
+                <a href="berita.html" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Berita</a>
+                <a href="index.html#kontak" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ================= JUDUL HALAMAN ================= -->
+        <section class="relative overflow-hidden border-b border-brand-200 bg-brand-50">
+            <div class="pointer-events-none absolute -left-20 -top-24 h-72 w-72 rounded-full bg-white/40 blur-3xl"></div>
+            <div class="pointer-events-none absolute -right-20 -bottom-24 h-72 w-72 rounded-full bg-white/30 blur-3xl"></div>
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="relative py-14 sm:py-20">
+                    <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap items-center gap-1 text-xs font-medium text-brand-700">
+                        <span class="inline-flex items-center gap-1">
+                            <a href="index.html#home" class="hover:underline">Home</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="m9 18 6-6-6-6"></path></svg>
+                        </span>
+                        <span class="inline-flex items-center gap-1"><span class="text-brand-900">Profil</span></span>
+                    </nav>
+                    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Profil</p>
+                    <h1 class="mt-2 max-w-3xl font-display text-3xl font-bold text-brand-900 sm:text-4xl lg:text-5xl">Tentang SMPN 72 Jakarta</h1>
+                    <p class="mt-4 max-w-2xl text-base leading-relaxed text-brand-700 sm:text-lg">Mewujudkan Pendidikan Berkualitas Membentuk generasi unggul, berkarakter, kreatif, dan siap menghadapi masa depan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= STATISTIK ================= -->
+        <section class="border-b border-brand-100 bg-white">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-6 py-10 sm:grid-cols-3">
+
+                    <div class="flex items-center gap-4">
+                        <div class="grid h-12 w-12 flex-none place-items-center rounded-2xl bg-brand-50 text-brand-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                        </div>
+                        <div>
+                            <p class="font-display text-2xl font-bold text-gray-900">35</p>
+                            <p class="text-sm text-gray-600">Tenaga Pendidik &amp; Kependidikan</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="grid h-12 w-12 flex-none place-items-center rounded-2xl bg-brand-50 text-brand-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-display text-2xl font-bold text-gray-900">428+</p>
+                            <p class="text-sm text-gray-600">Peserta Didik</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="grid h-12 w-12 flex-none place-items-center rounded-2xl bg-brand-50 text-brand-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-display text-2xl font-bold text-gray-900">A</p>
+                            <p class="text-sm text-gray-600">Akreditasi Sekolah</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SAMBUTAN KEPALA SEKOLAH ================= -->
+        <section id="sambutan" class="scroll-mt-20 bg-brand-50/60 py-16 sm:py-24">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="grid items-start gap-10 lg:grid-cols-5">
+
+                    <div class="lg:col-span-2">
+                        <div class="relative mx-auto max-w-sm">
+                            <div class="absolute -inset-2 rounded-3xl bg-gradient-to-br from-brand-200 to-brand-100 blur-xl"></div>
+                            <div class="relative overflow-hidden rounded-3xl border-4 border-white bg-white shadow-xl">
+                                <img src="assets/kepsek1.jpeg"
+                                     alt="Foto kepala sekolah" class="aspect-[5/6] w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <p class="font-display text-lg font-bold text-brand-900">Lilik Priyatmi, S.E.</p>
+                            <p class="mt-1 text-sm text-brand-700">Kepala SMPN 72 Jakarta</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3">
+                        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Sambutan Kepala Sekolah</p>
+                        <h2 class="mt-2 font-display text-3xl font-bold text-brand-900 sm:text-4xl">Selamat Datang di SMPN 72 Jakarta</h2>
+
+                        
+
+                        <div class="mt-3 space-y-4 text-base leading-relaxed text-gray-700">
+    <p><strong>Assalamualaikum warahmatullahi wabarakatuh,<br>Salam sejahtera bagi kita semua.</strong></p>
+    <p>Puji syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa atas segala rahmat dan karunia-Nya, sehingga laman resmi SMP Negeri 72 Jakarta ini dapat hadir sebagai sarana informasi, komunikasi, serta publikasi berbagai kegiatan dan perkembangan sekolah.</p>
+    <p>Selamat datang di situs web resmi SMP Negeri 72 Jakarta. Kami berkomitmen untuk mencetak peserta didik yang beriman, bertakwa, cerdas, berkarakter, berprestasi, dan berwawasan global. Komitmen tersebut kami wujudkan melalui pembelajaran yang aktif, kreatif, dan inovatif, pembinaan bakat serta minat siswa, dan penciptaan lingkungan belajar yang aman, nyaman, bersih, serta menyenangkan.</p>
+    <p>Akhir kata, kami mengucapkan terima kasih atas kepercayaan dan dukungan seluruh pihak bagi kemajuan SMP Negeri 72 Jakarta.</p>
+    <p><strong>Wassalamualaikum warahmatullahi wabarakatuh.</strong></p>
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VISI & MISI ================= -->
+        <section class="bg-white py-16 sm:py-24">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-6 lg:grid-cols-5">
+
+                    <div class="lg:col-span-2">
+                        <div class="h-full rounded-3xl border border-brand-200 bg-brand-50/70 p-8 shadow-sm">
+                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Visi</p>
+                            <div class="mt-3 grid h-12 w-12 place-items-center rounded-2xl bg-brand-500 text-white shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                            </div>
+                            <h3 class="mt-5 font-display text-2xl font-bold text-brand-900">Visi SMPN 72</h3>
+                            <p class="mt-3 text-gray-700">Terwujudnya Murid yang Religius, Berkarakter, Berprestasi, dan Berwawasan Global melalui Pembelajaran Mendalam di Lingkungan Sekolah yang Asri.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3">
+                        <div class="h-full rounded-3xl border border-brand-200 bg-brand-50/40 p-8 shadow-sm">
+                            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Misi</p>
+                            <div class="mt-3 grid h-12 w-12 place-items-center rounded-2xl bg-brand-500 text-white shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+                            </div>
+                            <h3 class="mt-5 font-display text-2xl font-bold text-brand-900">Langkah Menuju Visi</h3>
+                            <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+                                <li class="flex items-start gap-3 rounded-2xl border border-brand-200/80 bg-white/80 p-3 text-sm text-gray-700">
+                                    <span class="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-brand-500 text-xs font-bold text-white">1</span>
+                                    <span>Menanamkan nilai-nilai religius melalui pembiasaan ibadah, sikap spiritual, dan akhlak mulia dalam kehidupan sehari-hari di sekolah.</span>
+                                </li>
+                                <li class="flex items-start gap-3 rounded-2xl border border-brand-200/80 bg-white/80 p-3 text-sm text-gray-700">
+                                    <span class="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-brand-500 text-xs font-bold text-white">2</span>
+                                    <span>Mendorong prestasi akademik dan non akademik siswa dengan menerapkan pembelajaran mendalam (deep learning) yang menekankan pemahaman konsep, berpikir kritis, dan pemecahan masalah.</span>
+                                </li>
+                                <li class="flex items-start gap-3 rounded-2xl border border-brand-200/80 bg-white/80 p-3 text-sm text-gray-700">
+                                    <span class="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-brand-500 text-xs font-bold text-white">3</span>
+                                    <span>Mengembangkan pembelajaran yang Berkesadaran (mind full), Bermakna (meaning full) dan menggembirakan (joy full) untuk membangun kesadaran belajar, kemandirian, kreativitas, serta rasa senang dalam proses belajar.</span>
+                                </li>
+                                <li class="flex items-start gap-3 rounded-2xl border border-brand-200/80 bg-white/80 p-3 text-sm text-gray-700">
+                                    <span class="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-brand-500 text-xs font-bold text-white">4</span>
+                                    <span>Mempersiapkan siswa berwawasan global dengan membekali keterampilan abad 21 (literasi digital, komunikasi, kolaborasi, kreativitas, dan berpikir kritis) dan tetap berakar pada budaya Nasional.</span>
+                                </li>
+                                <li class="flex items-start gap-3 rounded-2xl border border-brand-200/80 bg-white/80 p-3 text-sm text-gray-700">
+                                    <span class="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-brand-500 text-xs font-bold text-white">5</span>
+                                    <span>Mewujudkan Lingkungan sekolah yang asri dan ramah belajar dengan menjaga kebersihan.</span>
+                                </li>
+                                <li class="flex items-start gap-3 rounded-2xl border border-brand-200/80 bg-white/80 p-3 text-sm text-gray-700">
+                                    <span class="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-brand-500 text-xs font-bold text-white">6</span>
+                                    <span>Terlaksananya peningkatan standar kelulusan.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= INFORMASI SEKOLAH ================= -->
+        <section class="bg-white pb-16 sm:pb-24">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="rounded-3xl border border-brand-200 bg-brand-50/70 p-8 shadow-sm sm:p-10">
+                    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Informasi Sekolah</p>
+                    <h3 class="mt-2 font-display text-2xl font-bold text-brand-900 sm:text-3xl">Profil Singkat &amp; Kontak</h3>
+                    <p class="mt-3 max-w-3xl text-gray-700">SMPN 72 Jakarta berkomitmen mencetak lulusan berkarakter, cerdas, dan berprestasi melalui pembelajaran berkualitas serta lingkungan sekolah yang kondusif.</p>
+
+                    <dl class="mt-8 grid gap-4 sm:grid-cols-2">
+                        <div class="flex items-start gap-3 rounded-2xl border border-brand-200/80 bg-white/90 p-4">
+                            <span class="mt-0.5 grid h-9 w-9 flex-none place-items-center rounded-xl bg-brand-100 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </span>
+                            <div class="min-w-0">
+                                <dt class="text-xs font-semibold uppercase tracking-wider text-gray-500">Alamat</dt>
+                                <dd class="mt-1 text-sm text-gray-800">Jl. Petojo Binatu Raya No. 2, Gambir, Jakarta Pusat</dd>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 rounded-2xl border border-brand-200/80 bg-white/90 p-4">
+                            <span class="mt-0.5 grid h-9 w-9 flex-none place-items-center rounded-xl bg-brand-100 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                            </span>
+                            <div class="min-w-0">
+                                <dt class="text-xs font-semibold uppercase tracking-wider text-gray-500">Telepon</dt>
+                                <dd class="mt-1 text-sm text-gray-800">(021) 6327871</dd>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 rounded-2xl border border-brand-200/80 bg-white/90 p-4">
+                            <span class="mt-0.5 grid h-9 w-9 flex-none place-items-center rounded-xl bg-brand-100 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                            </span>
+                            <div class="min-w-0">
+                                <dt class="text-xs font-semibold uppercase tracking-wider text-gray-500">Email</dt>
+                                <dd class="mt-1 text-sm text-gray-800"><a href="mailto:smpn72jakartapusat@gmail.com
+" class="text-brand-700 hover:underline">smpn72jakartapusat@gmail.com
+</a></dd>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 rounded-2xl border border-brand-200/80 bg-white/90 p-4">
+                            <span class="mt-0.5 grid h-9 w-9 flex-none place-items-center rounded-xl bg-brand-100 text-brand-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                            </span>
+                            <div class="min-w-0">
+                                <dt class="text-xs font-semibold uppercase tracking-wider text-gray-500">Website</dt>
+                                <dd class="mt-1 text-sm text-gray-800"><a href="index.html" class="text-brand-700 hover:underline">smpn72jakarta.sch.id</a></dd>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DAFTAR GURU ================= -->
+        <section class="bg-gray-50 py-16 sm:py-24">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Tenaga Pendidik &amp; Kependidikan</p>
+                    <h2 class="mt-2 font-display text-3xl font-bold text-gray-900 sm:text-4xl">Daftar Guru &amp; Tenaga Kependidikan</h2>
+                    <p class="mt-3 text-base text-gray-600">Tim pengajar SMPN 72 Jakarta.</p>
+                </div>
+
+                <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+                    <div class="relative flex-1 sm:max-w-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+                        <input id="guru-search" type="text" placeholder="Cari nama / jabatan…" aria-label="Cari guru"
+                               class="w-full rounded-full border border-gray-300 bg-white py-2 pl-9 pr-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30">
+                    </div>
+                    <select id="guru-filter" aria-label="Filter kategori guru"
+                            class="rounded-full border border-gray-300 bg-white px-4 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30">
+                        <option value="semua">Semua</option>
+                        <option value="kepala">Kepala Sekolah</option>
+                        <option value="wakil">Wakil Kepala Sekolah</option>
+                        <option value="guru">Guru Mata Pelajaran</option>
+                    </select>
+                    <span id="guru-count" class="text-sm text-gray-500">35 dari 35</span>
+                </div>
+
+                <div class="mt-12 space-y-14">
+                    <div class="guru-group" data-group="kepala">
+                        <div class="flex items-center justify-between border-b border-brand-100 pb-3">
+                            <h3 class="font-display text-2xl font-bold text-gray-900">Kepala Sekolah</h3>
+                            <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700" data-count>1 orang</span>
+                        </div>
+                        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" data-list></div>
+                    </div>
+
+                    <div class="guru-group" data-group="wakil">
+                        <div class="flex items-center justify-between border-b border-brand-100 pb-3">
+                            <h3 class="font-display text-2xl font-bold text-gray-900">Wakil Kepala Sekolah</h3>
+                            <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700" data-count>3 orang</span>
+                        </div>
+                        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" data-list></div>
+                    </div>
+
+                    <div class="guru-group" data-group="guru">
+                        <div class="flex items-center justify-between border-b border-brand-100 pb-3">
+                            <h3 class="font-display text-2xl font-bold text-gray-900">Guru Mata Pelajaran</h3>
+                            <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700" data-count>31 orang</span>
+                        </div>
+                        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" data-list></div>
+                    </div>
+                </div>
+
+                <p id="guru-empty" class="mt-10 hidden rounded-2xl border border-gray-200 bg-white px-5 py-10 text-center text-sm text-gray-600">
+                    Tidak ada nama yang sesuai dengan pencarian.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-950 text-gray-300">
+        <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="grid gap-10 py-14 md:grid-cols-4">
+
+                <div>
+                    <div class="flex items-center gap-3">
+                        <div class="grid h-12 w-12 flex-none place-items-center overflow-hidden rounded-xl bg-white p-1">
+                            <img src="assets/logo.png" alt="Logo SMPN 72 Jakarta" class="h-full w-full object-contain">
+                        </div>
+                        <div class="leading-tight">
+                            <p class="font-display text-base font-bold text-white">SMPN 72 Jakarta</p>
+                            <p class="text-xs uppercase tracking-wider text-gray-400">Sekolah Inovatif &amp; Berprestasi</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-400">Mewujudkan peserta didik yang cerdas, berakhlak mulia, serta berwawasan global dan peduli lingkungan.</p>
+                    <div class="mt-5 flex gap-2">
+                        <a href="https://instagram.com/smpn72jkt" target="_blank" rel="noreferrer" aria-label="Instagram" class="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-pink-600">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"></circle></svg>
+                        </a>
+                        <a href="https://tiktok.com/@smpn72jkt" target="_blank" rel="noreferrer" aria-label="TikTok" class="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-black">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.92a8.16 8.16 0 0 0 4.77 1.52V7a4.84 4.84 0 0 1-1.84-.31z"></path></svg>
+                        </a>
+                        <a href="https://twitter.com/smpn72jkt" target="_blank" rel="noreferrer" aria-label="Twitter" class="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-sky-600">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.873l-4.79-6.255L4.8 22H2.043l6.96-7.953L2 2h7.043l4.32 5.71L18.244 2Zm-1.207 18.4h1.78L7.046 3.5H5.13L17.037 20.4Z"></path></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@smpn72jakarta" target="_blank" rel="noreferrer" aria-label="YouTube" class="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-red-600">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M23.498 6.186a2.998 2.998 0 0 0-2.111-2.119C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.387.567A2.998 2.998 0 0 0 .502 6.186 31.43 31.43 0 0 0 0 12a31.43 31.43 0 0 0 .502 5.814 2.998 2.998 0 0 0 2.111 2.119C4.495 20.5 12 20.5 12 20.5s7.505 0 9.387-.567a2.998 2.998 0 0 0 2.111-2.119A31.43 31.43 0 0 0 24 12a31.43 31.43 0 0 0-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-200">Jelajahi</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="index.html#home" class="text-gray-400 transition hover:text-white">Home</a></li>
+                        <li><a href="profil.html" class="text-gray-400 transition hover:text-white">Profil</a></li>
+                        <li><a href="kurikulum.html" class="text-gray-400 transition hover:text-white">Kurikulum</a></li>
+                        <li><a href="kesiswaan.html" class="text-gray-400 transition hover:text-white">Kesiswaan</a></li>
+                        <li><a href="sarpras.html" class="text-gray-400 transition hover:text-white">Sarpras</a></li>
+                        <li><a href="berita.html" class="text-gray-400 transition hover:text-white">Berita</a></li>
+                        <li><a href="index.html#kontak" class="text-gray-400 transition hover:text-white">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-200">Informasi</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="berita-detail.html?id=pendaftaran-murid-baru" class="text-gray-400 transition hover:text-white">Penerimaan Murid Baru</a></li>
+                        <li><a href="berita.html" class="text-gray-400 transition hover:text-white">Pengumuman</a></li>
+                        <li><a href="berita.html" class="text-gray-400 transition hover:text-white">Kegiatan Sekolah</a></li>
+                        <li><a href="berita.html" class="text-gray-400 transition hover:text-white">Prestasi Siswa</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-200">Kontak Kami</h3>
+                    <ul class="mt-4 space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 flex-none text-gray-500"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Jl. Petojo Binatu Raya No. 2, Gambir, Jakarta Pusat</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 flex-none text-gray-500"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                            <a href="tel:0216321234" class="transition hover:text-white">(021) 6327871</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 flex-none text-gray-500"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                            <a href="mailto:smpn72jakartapusat@gmail.com
+" class="transition hover:text-white">smpn72jakartapusat@gmail.com
+</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="border-t border-white/10 py-6 text-center text-xs text-gray-500">© 2026 SMPN 72 Jakarta. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Menu mobile =====
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('icon-open');
+        const iconClose = document.getElementById('icon-close');
+
+        function setMenu(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            iconOpen.classList.toggle('hidden', open);
+            iconClose.classList.toggle('hidden', !open);
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuToggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+        }
+
+        menuToggle.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+
+        // ===== Data guru (total 35 orang) =====
+        const guru = [
+            { nama: 'Lilik Priyatmi, S.E.', jabatan: 'Kepala Sekolah', grup: 'kepala' },
+
+            { nama: 'Moh. Syamsu Rizal ', jabatan: 'KOMITE', grup: 'wakil' },
+            { nama: 'Kusmini, M.Pd. ', jabatan: 'Plt. KASATLAK', grup: 'wakil' },
+
+            { nama: 'Dwi Feriwanti, S.Si.', jabatan: 'Wakil Kepala Sekolah Bidang AKADEMIK', grup: 'wakil' },
+            { nama: 'Dra. Ai Roslina.', jabatan: 'Wakil Kepala Sekolah Bidang Kesiswaan', grup: 'wakil' },
+            { nama: 'Drs. Adju Surana.', jabatan: 'Wakil Kepala Sekolah Bidang Sarana dan Prasarana', grup: 'wakil' },
+
+            { nama: 'Rani Utami, S.Pd.', jabatan: 'Guru Bahasa Indonesia', grup: 'guru' },
+            { nama: 'Marlin Iqma Nugrahani, S.S.', jabatan: 'Guru Bahasa Indonesia', grup: 'guru' },
+            { nama: 'M. Iqbal Caniago, S.Pd.', jabatan: 'Guru Bahasa Inggris', grup: 'guru' },
+            { nama: 'Dra. Ai Roslina.', jabatan: 'Guru Matematika', grup: 'guru' },
+            { nama: 'Rum Efi Fitriani, S.Pd.', jabatan: 'Guru Matematika', grup: 'guru' },
+            { nama: 'Nurul Fatimah, S.Pd.', jabatan: 'Guru Matematika', grup: 'guru' },
+            { nama: 'Drs. Adju Surana.', jabatan: 'Guru IPA', grup: 'guru' },
+            { nama: 'Suratmini, S.Pd.', jabatan: 'Guru IPA', grup: 'guru' },
+            { nama: 'Dwi Feriwanti, S.Si.', jabatan: 'Guru IPA', grup: 'guru' },
+            { nama: 'Aditya Sandy Pratama, S.Pd.', jabatan: 'Guru IPS', grup: 'guru' },
+            { nama: 'Ismawiyati, S.Ag.', jabatan: 'Guru PPKn', grup: 'guru' },
+            { nama: 'Sukasno, S.Pd.I.', jabatan: 'Guru Pendidikan Agama Islam', grup: 'guru' },
+            { nama: 'Gita Ajeng Aryanti ', jabatan: 'Guru Seni Budaya', grup: 'guru' },
+            { nama: 'Sunaryo, S.Pd.', jabatan: 'Guru Seni Budaya', grup: 'guru' },
+            { nama: 'Wahyu Hidayat, S.Pd.', jabatan: 'Guru PJOK', grup: 'guru' },
+            { nama: 'Setyo Rizki Aryeni, S.Pd.', jabatan: 'Guru Informatika', grup: 'guru' },
+            { nama: 'Chusnul Fitri Widiyani, S.Psi., M.Pd.', jabatan: 'Guru BK', grup: 'guru' },
+            { nama: 'Vika Rusmania, S.Pd. ', jabatan: 'Guru BK', grup: 'guru' },
+            { nama: 'Siti Nurjanah, S.Pd.', jabatan: 'Guru Bahasa Indonesia', grup: 'guru' },
+            { nama: 'Endang Susilowati, S.Pd.', jabatan: 'Guru Bahasa Indonesia', grup: 'guru' },
+            { nama: 'Ratna Sari Dewi, S.Pd.', jabatan: 'Guru Bahasa Inggris', grup: 'guru' },
+            { nama: 'Ahmad Fauzi, S.Pd.', jabatan: 'Guru Matematika', grup: 'guru' },
+            { nama: 'Lestari Handayani, S.Pd.', jabatan: 'Guru IPA', grup: 'guru' },
+            { nama: 'Bambang Setiawan, S.Pd.', jabatan: 'Guru IPS', grup: 'guru' },
+            { nama: 'Nur Aisyah, S.Pd.', jabatan: 'Guru PPKn', grup: 'guru' },
+            { nama: 'Muhammad Ridwan, S.Pd.I.', jabatan: 'Guru Pendidikan Agama Islam', grup: 'guru' },
+            { nama: 'Dewi Anggraini, S.Pd.', jabatan: 'Guru Seni Budaya', grup: 'guru' },
+            { nama: 'Rizky Ramadhan, S.Pd.', jabatan: 'Guru PJOK', grup: 'guru' },
+            { nama: 'Fajar Nugroho, S.Kom.', jabatan: 'Guru Informatika', grup: 'guru' },
+        ];
+
+        // ===== Util =====
+        const gelar = ['Dra', 'Drs', 'Hj', 'H', 'S', 'M', 'A', 'P', 'Pd', 'SE', 'MM', 'MPd', 'SPd', 'SKom', 'SAg', 'STh', 'SPdI', 'Kom', 'IP', 'SH', 'ST'];
+
+        function inisial(nama) {
+            const kata = nama.replace(/[.,]/g, ' ').split(/\s+/).filter(k => k && k.length > 1 && !gelar.includes(k));
+            return (kata[0]?.[0] || '') + (kata[1]?.[0] || '');
+        }
+
+        function kartuGuru(orang) {
+            const wrap = document.createElement('div');
+            wrap.className = 'guru-card flex items-center gap-3 rounded-2xl border border-gray-200 bg-white p-3 shadow-sm transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-md';
+            wrap.dataset.nama = orang.nama.toLowerCase();
+            wrap.dataset.jabatan = orang.jabatan.toLowerCase();
+
+            const avatar = document.createElement('div');
+            avatar.className = 'grid h-12 w-12 flex-none place-items-center rounded-full bg-brand-100 font-display text-sm font-bold uppercase text-brand-700 ring-2 ring-brand-100';
+            avatar.textContent = inisial(orang.nama);
+
+            const info = document.createElement('div');
+            info.className = 'min-w-0';
+            const nama = document.createElement('p');
+            nama.className = 'truncate font-display text-sm font-semibold text-gray-900';
+            nama.textContent = orang.nama;
+            const jabatan = document.createElement('p');
+            jabatan.className = 'mt-0.5 line-clamp-2 text-xs text-gray-500';
+            jabatan.textContent = orang.jabatan;
+            info.append(nama, jabatan);
+
+            wrap.append(avatar, info);
+            return wrap;
+        }
+
+        // ===== Render daftar =====
+        document.querySelectorAll('.guru-group').forEach(group => {
+            const list = group.querySelector('[data-list]');
+            guru.filter(o => o.grup === group.dataset.group).forEach(o => list.appendChild(kartuGuru(o)));
+        });
+
+        // ===== Pencarian & filter =====
+        const search = document.getElementById('guru-search');
+        const filter = document.getElementById('guru-filter');
+        const counter = document.getElementById('guru-count');
+        const emptyState = document.getElementById('guru-empty');
+        const total = guru.length;
+
+        function terapkan() {
+            const kata = search.value.trim().toLowerCase();
+            const kategori = filter.value;
+            let tampil = 0;
+
+            document.querySelectorAll('.guru-group').forEach(group => {
+                let jumlah = 0;
+
+                group.querySelectorAll('.guru-card').forEach(card => {
+                    const cocokKategori = kategori === 'semua' || group.dataset.group === kategori;
+                    const cocokKata = !kata || card.dataset.nama.includes(kata) || card.dataset.jabatan.includes(kata);
+                    const tampilCard = cocokKategori && cocokKata;
+
+                    card.classList.toggle('hidden', !tampilCard);
+                    if (tampilCard) jumlah++;
+                });
+
+                group.classList.toggle('hidden', jumlah === 0);
+                group.querySelector('[data-count]').textContent = jumlah + ' orang';
+                tampil += jumlah;
+            });
+
+            counter.textContent = tampil + ' dari ' + total;
+            emptyState.classList.toggle('hidden', tampil > 0);
+        }
+
+        search.addEventListener('input', terapkan);
+        filter.addEventListener('change', terapkan);
+        terapkan();
+    </script>
+</body>
+</html>

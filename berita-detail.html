@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3366ff">
+    <meta name="description" content="Berita dan informasi resmi SMPN 72 Jakarta.">
+    <title>Berita — SMPN 72 Jakarta</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef5ff', 100: '#d9e7ff', 200: '#bcd4ff', 300: '#8eb7ff',
+                            400: '#598dff', 500: '#3366ff', 600: '#1f48f0', 700: '#1a37cc',
+                            800: '#1c30a3', 900: '#1c2f80'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/splash.css">
+    <script>
+        try {
+            if (sessionStorage.getItem('smpn72-splash') === '1') {
+                document.documentElement.classList.add('skip-splash');
+            } else {
+                sessionStorage.setItem('smpn72-splash', '1');
+            }
+        } catch (e) {}
+    </script>
+</head>
+<body class="bg-white font-sans text-gray-900 antialiased">
+
+    <div id="page-splash" aria-hidden="true">
+        <img src="assets/logo.png" width="92" height="92" alt="">
+        <p class="page-splash-title">SMPN 72 Jakarta</p>
+        <p class="page-splash-sub">Sekolah Inovatif &amp; Berprestasi</p>
+        <span class="page-splash-load"></span>
+    </div>
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">
+        Lewati ke konten utama
+    </a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/70">
+        <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between gap-4">
+
+                <a href="index.html#home" class="flex items-center gap-3">
+                    <img src="assets/logo.png" alt="Logo SMPN 72 Jakarta" class="h-10 w-10 object-contain">
+                    <div class="leading-tight">
+                        <p class="font-display text-sm font-bold text-gray-900">SMPN 72</p>
+                        <p class="text-[10px] font-medium uppercase tracking-wider text-gray-500">Jakarta</p>
+                    </div>
+                </a>
+
+                <nav class="hidden items-center gap-0.5 lg:flex" aria-label="Navigasi utama">
+                    <a href="index.html#home" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Home</a>
+                    <a href="profil.html" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Profil</a>
+                    <a href="kurikulum.html" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Kurikulum</a>
+                    <a href="kesiswaan.html" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Kesiswaan</a>
+                    <a href="sarpras.html" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Sarpras</a>
+                    <a href="berita.html" aria-current="page" class="rounded-full px-3 py-1.5 text-sm font-medium transition bg-brand-50 text-brand-700">Berita</a>
+                    <a href="index.html#kontak" class="rounded-full px-3 py-1.5 text-sm font-medium transition text-gray-600 hover:bg-gray-100 hover:text-gray-900">Kontak</a>
+                </nav>
+
+                <div class="hidden items-center gap-1 lg:flex">
+                    <a href="https://instagram.com/smpn_72jakarta" target="_blank" rel="noreferrer" aria-label="Instagram" class="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-pink-600">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"></circle></svg>
+                    </a>
+                    <a href="https://tiktok.com/@smpn72jkt" target="_blank" rel="noreferrer" aria-label="TikTok" class="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-black">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.92a8.16 8.16 0 0 0 4.77 1.52V7a4.84 4.84 0 0 1-1.84-.31z"></path></svg>
+                    </a>
+                    <a href="https://twitter.com/smpn72jkt" target="_blank" rel="noreferrer" aria-label="Twitter" class="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-sky-600">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.873l-4.79-6.255L4.8 22H2.043l6.96-7.953L2 2h7.043l4.32 5.71L18.244 2Zm-1.207 18.4h1.78L7.046 3.5H5.13L17.037 20.4Z"></path></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@smpn72jakarta" target="_blank" rel="noreferrer" aria-label="YouTube" class="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-red-600">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M23.498 6.186a2.998 2.998 0 0 0-2.111-2.119C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.387.567A2.998 2.998 0 0 0 .502 6.186 31.43 31.43 0 0 0 0 12a31.43 31.43 0 0 0 .502 5.814 2.998 2.998 0 0 0 2.111 2.119C4.495 20.5 12 20.5 12 20.5s7.505 0 9.387-.567a2.998 2.998 0 0 0 2.111-2.119A31.43 31.43 0 0 0 24 12a31.43 31.43 0 0 0-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z"></path></svg>
+                    </a>
+                </div>
+
+                <button type="button" id="menu-toggle" class="rounded-md p-2 text-gray-700 hover:bg-gray-100 lg:hidden" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+                    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden h-5 w-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white lg:hidden">
+            <nav class="mx-auto w-full max-w-6xl space-y-1 px-4 py-4 sm:px-6" aria-label="Navigasi mobile">
+                <a href="index.html#home" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Home</a>
+                <a href="profil.html" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Profil</a>
+                <a href="kurikulum.html" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Kurikulum</a>
+                <a href="kesiswaan.html" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Kesiswaan</a>
+                <a href="sarpras.html" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Sarpras</a>
+                <a href="berita.html" class="block rounded-xl bg-brand-50 px-4 py-2.5 text-sm font-semibold text-brand-700">Berita</a>
+                <a href="index.html#kontak" class="block rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-brand-50 hover:text-brand-700">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <div class="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+
+            <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-2 text-xs text-gray-500">
+                <a href="index.html#home" class="transition hover:text-brand-600">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="berita.html" class="transition hover:text-brand-600">Berita</a>
+                <span aria-hidden="true">/</span>
+                <span id="crumb-title" class="line-clamp-1 font-medium text-gray-700">Detail Berita</span>
+            </nav>
+
+            <!-- Artikel -->
+            <article id="artikel" class="mt-6">
+                <p id="artikel-kategori" class="inline-flex rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-700">Berita</p>
+                <h1 id="artikel-judul" class="mt-4 font-display text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">Memuat berita…</h1>
+
+                <div class="mt-4 flex items-center gap-3 text-xs text-gray-500">
+                    <span id="artikel-tanggal">—</span>
+                    <span aria-hidden="true">•</span>
+                    <span>Admin SMPN 72 Jakarta</span>
+                </div>
+
+                <div class="mt-6 overflow-hidden rounded-3xl border border-gray-200 bg-gray-100">
+                    <img id="artikel-gambar" alt=""  class="aspect-[4/5] w-full object-cover">
+                </div>
+
+                <div id="artikel-isi" class="mt-8 space-y-4 text-base leading-relaxed text-gray-700"></div>
+
+                <div class="mt-10 border-t border-gray-200 pt-6">
+                    <a href="berita.html" class="inline-flex items-center gap-2 rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-gray-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg>
+                        Kembali ke Berita
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tidak ditemukan -->
+            <div id="artikel-kosong" class="mt-6 hidden rounded-3xl border border-gray-200 bg-gray-50 p-8 text-center sm:p-12">
+                <div class="mx-auto grid h-14 w-14 place-items-center rounded-full bg-white text-gray-400 shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                </div>
+                <h1 class="mt-4 font-display text-2xl font-bold text-gray-900">Berita tidak ditemukan</h1>
+                <p class="mt-2 text-sm text-gray-600">Tautan yang Anda buka tidak tersedia atau sudah dipindahkan.</p>
+                <a href="berita.html" class="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-600">
+                    Lihat Semua Berita
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="mt-20 bg-gray-950 text-gray-300">
+        <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="grid gap-10 py-14 md:grid-cols-4">
+
+                <div>
+                    <div class="flex items-center gap-3">
+                        <div class="grid h-12 w-12 flex-none place-items-center overflow-hidden rounded-xl bg-white p-1">
+                            <img src="assets/logo.png" alt="Logo SMPN 72 Jakarta" class="h-full w-full object-contain">
+                        </div>
+                        <div class="leading-tight">
+                            <p class="font-display text-base font-bold text-white">SMPN 72 Jakarta</p>
+                            <p class="text-xs uppercase tracking-wider text-gray-400">Sekolah Inovatif &amp; Berprestasi</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-400">Mewujudkan peserta didik yang cerdas, berakhlak mulia, serta berwawasan global dan peduli lingkungan.</p>
+                    <div class="mt-5 flex gap-2">
+                        <a href="https://instagram.com/smpn_72jakarta" target="_blank" rel="noreferrer" aria-label="Instagram" class="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-pink-600">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.7" fill="currentColor"></circle></svg>
+                        </a>
+                        <a href="https://tiktok.com/@smpn72jkt" target="_blank" rel="noreferrer" aria-label="TikTok" class="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-black">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.92a8.16 8.16 0 0 0 4.77 1.52V7a4.84 4.84 0 0 1-1.84-.31z"></path></svg>
+                        </a>
+                        <a href="https://twitter.com/smpn72jkt" target="_blank" rel="noreferrer" aria-label="Twitter" class="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-sky-600">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.873l-4.79-6.255L4.8 22H2.043l6.96-7.953L2 2h7.043l4.32 5.71L18.244 2Zm-1.207 18.4h1.78L7.046 3.5H5.13L17.037 20.4Z"></path></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@smpn72jakarta" target="_blank" rel="noreferrer" aria-label="YouTube" class="grid h-9 w-9 place-items-center rounded-full bg-white/10 transition hover:bg-red-600">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M23.498 6.186a2.998 2.998 0 0 0-2.111-2.119C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.387.567A2.998 2.998 0 0 0 .502 6.186 31.43 31.43 0 0 0 0 12a31.43 31.43 0 0 0 .502 5.814 2.998 2.998 0 0 0 2.111 2.119C4.495 20.5 12 20.5 12 20.5s7.505 0 9.387-.567a2.998 2.998 0 0 0 2.111-2.119A31.43 31.43 0 0 0 24 12a31.43 31.43 0 0 0-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-200">Jelajahi</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="index.html#home" class="text-gray-400 transition hover:text-white">Home</a></li>
+                        <li><a href="profil.html" class="text-gray-400 transition hover:text-white">Profil</a></li>
+                        <li><a href="kurikulum.html" class="text-gray-400 transition hover:text-white">Kurikulum</a></li>
+                        <li><a href="kesiswaan.html" class="text-gray-400 transition hover:text-white">Kesiswaan</a></li>
+                        <li><a href="sarpras.html" class="text-gray-400 transition hover:text-white">Sarpras</a></li>
+                        <li><a href="berita.html" class="text-gray-400 transition hover:text-white">Berita</a></li>
+                        <li><a href="index.html#kontak" class="text-gray-400 transition hover:text-white">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-200">Informasi</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="berita-detail.html?id=pendaftaran-murid-baru" class="text-gray-400 transition hover:text-white">Penerimaan Murid Baru</a></li>
+                        <li><a href="berita.html" class="text-gray-400 transition hover:text-white">Pengumuman</a></li>
+                        <li><a href="berita.html" class="text-gray-400 transition hover:text-white">Kegiatan Sekolah</a></li>
+                        <li><a href="berita.html" class="text-gray-400 transition hover:text-white">Prestasi Siswa</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-200">Kontak Kami</h3>
+                    <ul class="mt-4 space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 flex-none text-gray-500"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Jl. Petojo Binatu Raya No. 2, Gambir, Jakarta Pusat</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 flex-none text-gray-500"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                            <a href="tel:0216321234" class="transition hover:text-white">(021) 6327871</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 flex-none text-gray-500"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                            <a href="mailto:smpn72jakartapusat@gmail.com
+" class="transition hover:text-white">smpn72jakartapusat@gmail.com
+</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="border-t border-white/10 py-6 text-center text-xs text-gray-500">© 2026 SMPN 72 Jakarta. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Menu mobile =====
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('icon-open');
+        const iconClose = document.getElementById('icon-close');
+
+        function setMenu(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            iconOpen.classList.toggle('hidden', open);
+            iconClose.classList.toggle('hidden', !open);
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuToggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+        }
+
+        menuToggle.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+
+        // ===== Data berita =====
+        const berita = {
+            'prestasi-gemilang1': {
+                judul: 'Reakreditasi Sekolah SMP NEGERI 72 JAKARTA',
+                kategori: 'Prestasi',
+                tanggal: '16 Oktober 2026',
+                gambar: 'assets/prestasi3.jpg',
+                isi: [
+                    'September 2026 menjadi bulan penuh prestasi bagi peserta didik SMP Negeri 72 Jakarta. Berbagai pencapaian berhasil diraih melalui semangat, disiplin, kerja keras, keberanian, dan sportivitas dalam berbagai ajang perlombaan.',
+                    'JAMBORE NASIONAL GERAKAN PRAMUKA XII TAHUN 2026',
+                    'LOMBA KEJUARAAN FORBASI JAKARTA PUSAT 2026 Tingkat SMP/MTs Sederajat se-Jakarta Pusat — 12 September 2026',
+                    'LOMBA FORMASI PENGIBARAN BENDERA SE-JABODETABEK Tingkat SMP/MTs Sederajat — 19 September 2026, SMPN 126 Jakarta',
+                    'CEMPAKA PUTIH JUDO OPEN 2026 Kelapa Gading Judo Sport Hall, Jakarta — 26–27 September 2026',
+                    'RAKA MAHESA PERDANIJuara 2 — Under -73 Kg Men, Category 13–15 Tahun',
+                    'EXSANDER REYMARU PASUMAIN Juara 1 — Under -55 Kg Men, Category 10–12 Tahun'
+                ]
+            },
+
+            'prestasi-gemilang': {
+                judul: 'Prestasi Gemilang Siswa-Siswi SMP Negeri 72 Jakarta',
+                kategori: 'Prestasi',
+                tanggal: '30 Oktober 2026',
+                gambar: 'assets/prestasi2.jpg',
+                isi: [
+                    'PRESTASI GEMILANG SISWA-SISWI SMP NEGERI 72 JAKARTA! Keluarga besar SMP Negeri 72 Jakarta mengucapkan selamat dan apresiasi setinggi-tingginya kepada para siswa dan siswi SMP Negeri 72 Jakarta atas prestasi membanggakan yang telah diraih dalam berbagai ajang kompetisi.SMPN 72 Jakarta kembali menorehkan prestasi membanggakan. Salah satu peserta didik kelas VIII berhasil meraih medali emas pada Olimpiade Sains tingkat kota yang diikuti oleh puluhan sekolah di DKI Jakarta.',
+                    'Berikut deretan prestasi yang berhasil diraih:',
+                    'Juara 1 CABANG OLAHRAGA RENANG',
+                    'Juara 3 CABANG OLAHRAGA PENCAK SILAT',
+                    'PRESTASI PURNA 72 – GALAXY VEST 2026',
+                    'Prestasi ini merupakan bukti nyata dari kerja keras, kedisiplinan, semangat juang, serta dukungan dari para guru, pelatih, dan orang tua.',
+                    'Teruslah berkarya, berprestasi, dan mengharumkan nama sekolah. Semoga pencapaian ini menjadi motivasi bagi seluruh siswa SMP Negeri 72 Jakarta untuk terus mengembangkan potensi dan meraih prestasi yang lebih tinggi',
+
+                ]
+            },
+            'kegiatan-upacara': {
+                judul: 'Upacara Hari Kemerdekaan Republik Indonesia',
+                kategori: 'Kegiatan Sekolah',
+                tanggal: '17 Agustus 2026',
+                gambar: 'assets/Kg1.jpg',
+                isi: [
+                    'SMPN 72 Jakarta menyelenggarakan kegiatan peringatan Hari Ulang Tahun ke-81 Kemerdekaan Republik Indonesia pada 17 Agustus 2026 dengan melaksanakan upacara bendera di lingkungan sekolah.',
+    'Kegiatan upacara diikuti oleh seluruh peserta didik, guru, dan tenaga kependidikan dengan penuh khidmat sebagai bentuk penghormatan terhadap jasa para pahlawan yang telah memperjuangkan kemerdekaan Indonesia.',
+    'Melalui kegiatan ini, seluruh warga sekolah diajak untuk menumbuhkan rasa nasionalisme, kedisiplinan, persatuan, serta semangat dalam mengisi kemerdekaan melalui hal-hal positif.',
+    'Peringatan 17 Agustus menjadi momentum untuk memperkuat rasa cinta tanah air dan menanamkan nilai-nilai perjuangan kepada generasi muda.'
+                ]
+            },
+            'Akreditasi': {
+                judul: 'Reakreditasi Sekolah SMP NEGERI 72 JAKARTA',
+                kategori: 'Pengumuman',
+                tanggal: '16 Oktober 2026',
+                gambar: 'assets/Info1.jpg',
+                isi: [
+                    'DOKUMENTASI REAKREDITASI SEKOLAH SMP NEGERI 72 JAKARTA, 13-14 OKTOBER 2026.',
+                    'Alhamdulillah, kegiatan visitasi reakreditasi sekolah SMP Negeri 72 Jakarta telah terlaksana dengan baik. Kegiatan ini menjadi momentum penting untuk mengevaluasi dan meningkatkan mutu pendidikan, kualitas layanan, serta tata kelola sekolah demi mewujudkan pendidikan yang semakin berkualitas.',
+                    'Terima kasih kepada tim asesor, seluruh guru dan tenaga kependidikan, serta semua pihak yang telah berkontribusi dan bekerja sama dalam menyukseskan kegiatan ini. ',
+                    'Semoga melalui kegiatan reakreditasi ini, SMP Negeri 72 Jakarta semakin maju, unggul, dan terus berkomitmen memberikan pelayanan pendidikan terbaik bagi seluruh peserta didik.'
+                ]
+            },
+            'pendaftaran-murid-baru': {
+                judul: 'Mekanisme Pendaftaran Murid Baru Tahun Ajaran 2026/2027',
+                kategori: 'Pengumuman',
+                tanggal: '20 Oktober 2026',
+                gambar: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=70',
+                isi: [
+                    'Penerimaan murid baru SMPN 72 Jakarta tahun ajaran 2026/2027 dilaksanakan melalui mekanisme yang ditetapkan oleh dinas pendidikan. Calon peserta didik mendaftar secara daring melalui laman resmi penerimaan murid baru.',
+                    'Persyaratan utama meliputi ijazah atau surat keterangan lulus sekolah dasar, kartu keluarga, akta kelahiran, serta dokumen pendukung lain sesuai jalur pendaftaran yang dipilih.',
+                    'Tahapan seleksi terdiri atas pendaftaran, verifikasi dokumen, pengumuman hasil, dan daftar ulang. Calon peserta didik diimbau memantau jadwal secara berkala agar tidak melewatkan tahapan penting.',
+                    'Informasi lebih lanjut dapat diperoleh melalui layanan tata usaha sekolah pada hari kerja atau melalui kontak resmi yang tersedia di laman ini.'
+                ]
+            },
+            'verifikasi-adiwiyata': {
+                judul: 'Verifikasi Lapangan Adiwiyata Tingkat Kota',
+                kategori: 'Kegiatan Sekolah',
+                tanggal: '12 Oktober 2026',
+                gambar: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=70',
+                isi: [
+                    'SMPN 72 Jakarta menerima kunjungan tim verifikasi Adiwiyata tingkat kota. Kegiatan ini merupakan bagian dari penilaian program sekolah yang peduli dan berbudaya lingkungan hidup.',
+                    'Tim verifikasi meninjau sejumlah area sekolah, termasuk pengelolaan sampah, taman sekolah, kolam resapan, serta pemanfaatan lahan hijau untuk kegiatan pembelajaran.',
+                    'Selain peninjauan lapangan, tim juga memeriksa dokumen program lingkungan sekolah dan berdiskusi dengan perwakilan peserta didik mengenai kegiatan yang telah dilaksanakan.',
+                    'Hasil verifikasi menjadi bahan evaluasi untuk memperkuat budaya peduli lingkungan di lingkungan sekolah maupun di rumah.'
+                ]
+            },
+            'workshop-guru-digital': {
+                judul: 'Workshop Peningkatan Kompetensi Guru Berbasis Digital',
+                kategori: 'Kegiatan Sekolah',
+                tanggal: '05 Oktober 2026',
+                gambar: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=70',
+                isi: [
+                    'Dalam rangka meningkatkan kualitas pembelajaran, SMPN 72 Jakarta menggelar workshop peningkatan kompetensi guru berbasis digital bagi seluruh tenaga pendidik.',
+                    'Materi workshop mencakup penyusunan bahan ajar interaktif, pemanfaatan asesmen digital, serta pengelolaan kelas daring yang efektif dan tetap berpusat pada peserta didik.',
+                    'Para guru berlatih langsung menggunakan perangkat pembelajaran digital dan menyusun rencana penerapannya di kelas masing-masing.',
+                    'Kegiatan ini diharapkan mampu mendorong pembelajaran yang lebih variatif, menyenangkan, dan sesuai dengan kebutuhan peserta didik.'
+                ]
+            }
+        };
+
+        // ===== Render artikel =====
+        const params = new URLSearchParams(location.search);
+        const id = params.get('id');
+        const data = id ? berita[id] : null;
+
+        const elArtikel = document.getElementById('artikel');
+        const elKosong = document.getElementById('artikel-kosong');
+
+        if (data) {
+            document.title = data.judul + ' — SMPN 72 Jakarta';
+
+            document.getElementById('crumb-title').textContent = data.judul;
+            document.getElementById('artikel-kategori').textContent = data.kategori;
+            document.getElementById('artikel-judul').textContent = data.judul;
+            document.getElementById('artikel-tanggal').textContent = data.tanggal;
+
+            const img = document.getElementById('artikel-gambar');
+            img.src = data.gambar;
+            img.alt = data.judul;
+
+            const isi = document.getElementById('artikel-isi');
+            data.isi.forEach(teks => {
+                const p = document.createElement('p');
+                p.textContent = teks;
+                isi.appendChild(p);
+            });
+        } else {
+            elArtikel.classList.add('hidden');
+            elKosong.classList.remove('hidden');
+            document.title = 'Berita tidak ditemukan — SMPN 72 Jakarta';
+        }
+    </script>
+</body>
+</html>
